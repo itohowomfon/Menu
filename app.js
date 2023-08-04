@@ -1,4 +1,4 @@
-// get only unique categories - reduce()
+ // get only unique categories - reduce()
 // iterate over categories return buttons
 // make sure to select buttons when they are available
 
@@ -126,7 +126,7 @@ function displayMenuButtons() {
   },["all"]);
 
   const categoryBtns = categories.map(function(category) {
-    return `<button class="filter-btn" type="button"data-id=${category}>${category}</button>`
+    return `<button class="filter-btn" type=""data-id=${category}>${category}</button>`
   }).join("");
   container.innerHTML = categoryBtns;
   const filterBtn = container.querySelectorAll(".filter-btn");
@@ -139,7 +139,6 @@ function displayMenuButtons() {
           return menuItem;
         }
       });
-      //console.log(menuCategory);
       if(category === "all") {
         displayMenuItems(menu);
       }
